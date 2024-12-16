@@ -1,6 +1,6 @@
 {% set name = "octree-creation-app" %}
 {% set version = "0.1.1" %}
-{% set python_min = 3.10 %}
+{% set python_min = 3.10.0 %}
 {% set python_max = 3.11 %}
 
 package:
