@@ -1,7 +1,6 @@
 {% set name = "octree-creation-app" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 {% set python_min = "3.10" %}
-{% set python_max = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -9,12 +8,12 @@ package:
 
 source:
   url: https://github.com/MiraGeoscience/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b3359c7b3333a3208fa78c4f114eae8b5be0b256ece51aa4b9d14b5f2998bf3b
+  sha256: b00c8d6d10c1b8069855e4438bca15f87b33ca3b8bcabe3950f4b6925f1511c5
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -23,15 +22,15 @@ requirements:
     - setuptools
     - pip
   run:
-    - python >={{ python_min }},<{{ python_max }}
+    - python >={{ python_min }}
     - discretize >=0.10.0,<0.11.0
-    - numpy >=1.23.5,<1.24.0
-    - scipy >=1.10.1,<1.11.0
-    - geoh5py >=0.9.0,<0.10.0
-    - geoapps-utils >=0.3.0,<0.4.0
+    - numpy >=1.26.0,<1.27.0
+    - scipy >=1.14.0,<1.15.0
+    - geoh5py 0.10.*
+    - geoapps-utils 0.4.*
     - h5py >=3.2.1,<4.0.0
     - pillow >=10.3.0,<10.4.0
-    - pydantic >=2.5.2,<2.6.0
+    - pydantic >=2.5.2,<3.0.0
 
 test:
   imports:
@@ -50,12 +49,12 @@ about:
     refinements using the SimPEG.discretize package. The refinements can be performed 
     on any number of Objects stored in a geoh5 file.
   license: MIT
-  license_file: 
+  license_file:
     - LICENSE
   doc_url: https://mirageoscience-octree-creation-app.readthedocs-hosted.com/
   dev_url: https://github.com/MiraGeoscience/octree-creation-app
 
 extra:
   recipe-maintainers:
-    - SophieCurinier
+    - andrewg-mira
     - sebhmg
