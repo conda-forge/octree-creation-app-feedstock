@@ -1,7 +1,6 @@
 {% set name = "octree-creation-app" %}
 {% set version = "0.2.0" %}
 {% set python_min = "3.10" %}
-{% set python_max = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -23,15 +22,15 @@ requirements:
     - setuptools
     - pip
   run:
-    - python >={{ python_min }},<{{ python_max }}
+    - python >={{ python_min }}
     - discretize >=0.10.0,<0.11.0
-    - numpy >=1.23.5,<1.24.0
-    - scipy >=1.10.1,<1.11.0
-    - geoh5py >=0.9.0,<0.10.0
-    - geoapps-utils >=0.3.0,<0.4.0
+    - numpy >=1.26.0,<1.27.0
+    - scipy >=1.14.0,<1.15.0
+    - geoh5py 0.10.*
+    - geoapps-utils 0.4.*
     - h5py >=3.2.1,<4.0.0
     - pillow >=10.3.0,<10.4.0
-    - pydantic >=2.5.2,<2.6.0
+    - pydantic >=2.5.2,<3.0.0
 
 test:
   imports:
