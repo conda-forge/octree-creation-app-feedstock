@@ -17,7 +17,6 @@ The octree-creation-app package lets users create Octree mesh objects with local
 refinements using the SimPEG.discretize package. The refinements can be performed
 on any number of Objects stored in a geoh5 file.
 
-
 Current build status
 ====================
 
@@ -152,6 +151,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@SophieCurinier](https://github.com/SophieCurinier/)
+* [@andrewg-mira](https://github.com/andrewg-mira/)
 * [@sebhmg](https://github.com/sebhmg/)
 
