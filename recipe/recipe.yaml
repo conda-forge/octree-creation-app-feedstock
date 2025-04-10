@@ -37,11 +37,19 @@ requirements:
 
 tests:
   - python:
+      python_version: ${{ python_min }}.*
       imports:
         - octree_creation_app
       pip_check: true
+  - script:
+      - pytest --ignore=tests/version_test.py
+    requirements:
+      run:
+        - pytest
+    files:
+      source:
+        - tests/
 
-      python_version: ${{ python_min }}.*
 about:
   summary: Octree creation app.
   description: |
