@@ -20,10 +20,10 @@ build:
 
 requirements:
   host:
-    - python 3.10.*
-    - poetry-core >=1.0.0
-    - setuptools
     - pip
+    - poetry-core >=1.0.0
+    - python ${{ python_min }}.*
+    - setuptools
   run:
     - python >=${{ python_min }}
     # Mira packages
